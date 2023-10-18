@@ -1,6 +1,6 @@
 # Todo App with Flutter & Hive
 
-<p align='center'><img src="screenshots/read.png"  width="60%" height="400"></p>
+<p align='center'><img src="screenshots/read.png"  width="60%" height="600"></p>
 
 This is a minimalistic Flutter Todo app that uses Hive for local storage.
 
