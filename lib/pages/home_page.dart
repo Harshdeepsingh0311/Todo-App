@@ -15,9 +15,6 @@ class _HomePageState extends State<HomePage>{
   final _controller = TextEditingController();
 
   List todoList = [
-    ["Make Tutorial", false, (p0)=>{}],
-    ["Go to Gym", true, (p0)=>{}],
-    ["Go to Kanpur", true, (p0)=>{}],
   ];
 
   void checkBoxChanged(bool? value, int index){
@@ -46,6 +43,12 @@ class _HomePageState extends State<HomePage>{
     Navigator.of(context).pop();
   }
 
+  void deleteTask(int index){
+    setState(() {
+      todoList.removeAt(index);
+    });
+  }
+
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -65,9 +68,10 @@ class _HomePageState extends State<HomePage>{
         itemBuilder:(context, index) {
           return ToDoTile(
             taskName: todoList[index][0],
-             taskCompleted: todoList[index][1],
-              onChanged:(value) =>  checkBoxChanged(value,index)
-              );
+            taskCompleted: todoList[index][1],
+            onChanged:(value) =>  checkBoxChanged(value,index),
+            delete: (context)=> deleteTask(index),
+            );
         },    
       ),
     );
