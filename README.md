@@ -1,6 +1,6 @@
-# ToDo App with Hive
+# Todo App with Flutter & Hive
 
-![App Screenshots](screenshots/read.png)
+<p align='center'><img src="screenshots/read.png"  width="60%" height="400"></p>
 
 This is a minimalistic Flutter Todo app that uses Hive for local storage.
 
@@ -17,9 +17,10 @@ This is a minimalistic Flutter Todo app that uses Hive for local storage.
 
 ## Screenshots
 
-![Screenshot 1](screenshots/read.png)
-![Screenshot 2](screenshots/create.png)
-![Screenshot 3](screenshots/delete.png)
+| Create Tasks | Manage Tasks  | Delete Tasks |
+| -------- | --------- | ------- |
+| <img src="screenshots/create.png" width="100%" height="400"> | <img src="screenshots/read.png" width="100%" height="400"> | <img src="screenshots/delete.png" width="100%" height="400"> |
+
 
 ## Getting Started
 
@@ -27,3 +28,25 @@ This is a minimalistic Flutter Todo app that uses Hive for local storage.
 
 ```bash
 git clone https://github.com/Harshdeepsingh0311/todo-app.git
+```
+2. Change your working directory to the project folder:
+```bash
+cd todo-app
+```
+
+3. Install the required packages:
+```bash
+flutter pub get
+```
+
+4. Run the app:
+```bash
+flutter run
+```
+
+## Contributing
+Contributions are welcome! Feel free to open issues or pull requests for any improvements or bug fixes.
+
+
+## License
+This project is open-source and available under the MIT License.
