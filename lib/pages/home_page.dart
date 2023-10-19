@@ -4,6 +4,7 @@ import 'package:todo_app/util/dialog_box.dart';
 import 'package:todo_app/util/todo_tile.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -81,7 +82,21 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: const Color.fromRGBO(255, 106, 52, 1),
         child: const Icon(Icons.add),
       ),
-      body: ListView.builder(
+      body: (db.todoList.isEmpty)? const Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Start creating your todo list now!",
+              style: TextStyle(fontSize: 24),),
+            Icon(
+              Icons.south_east_rounded,
+              size: 200,
+              color: Color.fromARGB(255, 0, 51, 91)
+            ),
+          ],
+        )
+      ) :ListView.builder(
         itemCount: db.todoList.length,
         itemBuilder: (context, index) {
           return ToDoTile(
